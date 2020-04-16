@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title style="margin-left:auto;margin-right:auto;" th:text="${title}"></title>      
+	</head>
+   
+    <body>
+		<h1 align="center" th:text="${title}"></h1>
+		<table style="border:1px solid black;margin-left:auto;margin-right:auto;">
+			<tr><th>User Name</th><th>Keys Pressed</th></tr>
+			<td th:text="${name}"></td>
+			<td th:text="${keys}"></td>
+			</tr>
+		</table>
+   </body>
+</html>
