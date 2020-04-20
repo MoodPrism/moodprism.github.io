@@ -1,0 +1,22 @@
+
+pipeline {
+    agent any
+	
+    stages {
+        stage('Clean') {
+	    steps {
+               sh "mvn -f Projeto/moodprism/pom.xml clean"
+            }
+        }
+        stage('Test') {
+            steps {
+                sh "mvn -f  Projeto/moodprism/pom.xml test"
+            }
+        }
+        stage('Package') {
+            steps {
+                sh "mvn -f  Projeto/moodprism/pom.xml package"
+            }
+        }
+    }
+}
